@@ -19,32 +19,80 @@ a {
 }
 
 /* ここからCSSを書いていきましょう */
-
-/* ---------- header ---------- */
-
-/* ---------- Main ---------- */
-.top {
-  background-image: url(https://prog-8.com/images/html/advanced/top.png);
-  background-size: cover;
-}
+/* ---------- 共通 ---------- */
 
 .container {
-  padding: 180px 0px 100px 0px;
   width: 1170px;
   margin: 0 auto;
+}
+
+.heading  {
+  padding: 80px 0 50px 0;
+  color: #5f5d60;
+}
+
+.heading h2 {
+
+  font-weight: normal;
+}
+
+/* ---------- header ---------- */
+header {
+  background-color: rgba(34, 49, 52, 0.9);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 10;
+}
+
+header .container {
+  width: 1170px;
+  margin: 0 auto;
+  height: 65px;
+}
+
+header img {
+  width: 124px;
+  padding: 20px 0px;
+}
+
+.login {
+  color: white;
+  float: right;
+  padding: 0px 25px;
+  line-height: 65px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.5s;
+}
+
+.login:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+/* ---------- Main ---------- */
+/* ----- top-wrapper ----- */
+.top-wrapper .container {
+  padding: 180px 0px 100px 0px;
   text-align: center;
+}
+
+.top-wrapper {
+  background-image: url(https://prog-8.com/images/html/advanced/top.png);
+  background-size: cover;
 }
 
 .sub-message {
   padding-bottom: 15px;
   
 }
-.top h1, p {
+.top-wrapper h1, .top-wrapper p {
   color: white;
   opacity: 0.7;
 }
 
-.top h1 {
+.top-wrapper h1 {
   font-size: 45px;
   font-weight: bold;
   letter-spacing: 5px;
@@ -57,7 +105,7 @@ a {
   display: inline-block;
   border-radius: 4px;
   opacity: 0.8;
-  margin: 15px 0px;
+  margin: 10px 0px;
 }
 
 .btn:hover {
@@ -72,6 +120,77 @@ a {
 .twitter {
     background-color: #55acee;
 }
+/* ----- lesson-wrapper ----- */
+
+.lesson-wrapper {
+  background-color: #f7f7f7;
+  text-align: center;
+  height: 580px;
+}
+
+.lesson {
+  float: left;
+  width: 25%;
+}
+
+.lesson-icon {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.lesson-icon p {
+  position: absolute;
+  width: 100%;
+  top: 90px;
+  color: white;
+}
+
+.lesson-text {
+  color: #b3aeb5;
+  font-size: 13px;
+  width: 80%;
+  display: inline-block;
+}
+
+
+/* ----- message-wrapper ----- */
+.message-wrapper {
+  text-align: center;
+  padding-bottom: 80px;
+
+}
+
+.develop-btn {
+  color: white;
+  background-color: #5dca88;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 4px;
+  opacity: 0.8;
+  box-shadow: 0 7px #1a7940;
+}
+
+.develop-btn:hover {
+    opacity: 1.0;
+}
+
+.develop-btn:active {
+    box-shadow: none;
+    margin-top: 7px;
+}
 
 
 /* ---------- Footer ---------- */
+footer {
+  border: 1px solid #eee;
+  padding: 30px 0;
+}
+
+footer img {
+  width: 124px;
+}
+
+footer p {
+  font-size: 12px;
+  color: #b3aeb5;
+}
